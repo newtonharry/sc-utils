@@ -1,0 +1,29 @@
+[project]
+name = "sc-utils"
+version = "0.1.0"
+description = "Add your description here"
+authors = [
+    { name = "Harry Newton", email = "harryjnewton98@gmail.com" }
+]
+dependencies = [
+    "scanpy>=1.9.8",
+]
+readme = "README.md"
+requires-python = ">= 3.8"
+
+[project.scripts]
+hello = "sc_utils:hello"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = []
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/sc_utils"]
